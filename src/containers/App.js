@@ -130,8 +130,8 @@ function App() {
 
 
       <Switch>
-        <Route exact path="/products" component={CandiesPage} />
-        <Route exact path="/cart" component={CartPage} />
+        <Route exact path="candy-store/products" component={CandiesPage} />
+        <Route exact path="candy-store/cart" component={CartPage} />
       </Switch>
 
       <div className="nav">
