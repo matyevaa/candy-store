@@ -6,7 +6,7 @@ The goal of this assignment is to use Redux to maintain the global state of an a
 
 Please refer to the demo below:
 
-![Screen capture of full app demo](src/images/candy-store.gif)
+![Screen capture of full app demo](src/images/candy-store-demo.gif)
 
 # Application features
 
