@@ -139,7 +139,7 @@ function App() {
         <p className="text">Explore your candies here</p>
       </div>
       <div className="links">
-        <a id="link1"><Link to="./products">Candies</Link></a>
+        <a id="link1"><Link to="candy-store/products">Candies</Link></a>
         <a id="link2"><Link to="./cart">Shopping Cart</Link></a>
       </div>
 
