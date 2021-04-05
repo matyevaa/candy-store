@@ -1,15 +1,16 @@
-# Assignment 4
+# Shopping cart application with Redux and Emotion
 
-**Assignment due at 11:59pm on Monday, 3/1/2021**<br>
-**Grading demo due by 5:00pm on Friday 3/19/2021**
+### Assignment 4 for Advanced Web Development class at OSU instructed by professor R. Hess (2020).
 
 The goal of this assignment is to use Redux to maintain the global state of an application.  You will specifically implement a basic shopping cart application for the "Penny Candy Store", an online store that sells penny candy.
 
-Here, you're provided with code for an application initially created using Create React App and then pared down somewhat to eliminate clutter that's not relevant to the assignment.  All of the normal Create React App workflows will function as expected.  For example, you can launch the development server by running `npm start` (after running `npm install` the first time you run the app).
+Please refer to the demo below:
+
+![Screen capture of full app demo](src/images/candy-store.gif)
+
+# Application features
 
 In addition to the basic Create React App code, there is a product data file in [`src/data/products.json`](src/data/products.json) and a custom React hook in [`src/hooks/useProducts.js`](src/hooks/useProducts.js) that simulates "fetching" those products from an API.
-
-Your job is to implement the Redux-based application described below.  The implementation is broken down into a couple different sub-tasks.
 
 ## 1. Display a list of all available products
 
@@ -31,8 +32,6 @@ Once the products are added to the store, you should use the store to display th
   * The product image.
   * The price of a unit of the product.
   * The number of units in stock.
-  * A small text/number input field where the user can enter the number of units of the product they want to add to their cart.
-      * This field should initially contain the value 0 for all products, and, importantly, users should be able to modify the value of this field independently for each different product.
   * A button that says "add to cart".
 
 Implement a distinct component to display each individual product.  You should also add some CSS to make this list relatively visually appealing.  The styling doesn't need to be super polished, but you should make your application look roughly like a regular online store.  For example, all of the product images displayed in the product list should be the same size.  You may choose how to implement this CSS.  For example, writing a simple CSS file is fine, or you can use Emotion (or another CSS-in-JS library, if you want to explore).
@@ -59,17 +58,16 @@ The shopping cart should also have the following features:
   * There should be some mechanism that allows the user to remove a product from their cart (e.g. a "remove" button or link for each product in the cart).  If a product is removed from the user's cart, the appropriate number of units of that product should be added back to the in-stock inventory in the product list.
   * The shopping cart should contain a "checkout" button.  For this app, the "checkout" button should simply empty out the shopping cart (i.e. remove all products from it) *without* adding those products back to the in-stock inventory.
 
-Think carefully about how to design the Redux elements related to the shopping cart.  For example, you'll likely need several actions, e.g. one to add an item to the cart, one to remove an item from the cart and place it back in inventory, one to checkout, etc.
+## Application styling
 
-## Assignment submission
+To accomplish some of the layout required in the description above, Emotion style has been written for this application.
 
-We'll be using GitHub Classroom for this assignment, and you will submit your assignment via GitHub.  Just make sure your completed files are committed and pushed by the assignment's deadline to the master branch of the GitHub repo that was created for you by GitHub Classroom.  A good way to check whether your files are safely submitted is to look at the master branch your assignment repo on the github.com website (i.e. https://github.com/osu-cs499-w21/assignment-4-YourGitHubUsername/). If your changes show up there, you can consider your files submitted.
+## Working with this code
 
-## Assignment grading
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Before running this app for the first time, make sure to run `npm install` to install needed dependencies. Then, to run the app and see it in your browser, you can run
+```
+npm start
+```
+This will run the app in the development mode, and it should automatically open [http://localhost:3000](http://localhost:3000) to view the app in your browser (though you can manually open that URL in your browser, too).
 
-This assignment is worth 10 points total.  You can also earn 1 point of extra credit as described above.
-
-Remember that in this course, programming assignments will be graded based on effort instead of correctness, and you will get full credit for an assignment if it is submitted on time and is clearly the product of a determined effort to solve the problem.  Again, If you’re unable to solve the homework problem, make sure to submit all code you’ve written, and then describe in comments in the source code the following three things:
-  1. How you attempted to solve the problem.
-  2. Where you ran into trouble.
-  3. What options you think (conceptually) might lead to a working solution.
